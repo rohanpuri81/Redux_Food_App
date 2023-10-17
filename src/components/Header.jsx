@@ -27,7 +27,7 @@ const Header = () => {
   const total = () => {
     let pric = 0;
     getdata.cart.map((ele, k) => {
-      pric += ele.price;
+      pric += ele.price * ele.qnty;
     });
     setPrice(pric);
   };
@@ -136,7 +136,7 @@ const Header = () => {
                       );
                     })}
 
-                    <p className="text-center">Total : Rs. 300</p>
+                    <p className="text-center">Total : Rs. {price}</p>
                   </tbody>
                 </Table>
               </div>

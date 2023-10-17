@@ -10,7 +10,6 @@ const Cards = () => {
   const d = useSelector((state) => state.cart.cart);
   const send = (ele) => {
     dispatch(ADD_CART(ele));
-    console.log(d);
   };
   const [data, setData] = useState(Cardsdata);
   return (
